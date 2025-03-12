@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 In general, a hypothesis is a testable statement or assumption about a relationship between two or more variables.
 It serves as the foundation for research and statistical analysis, guiding experiments and observations.
 
-**Key Characteristics of a Hypothesis:**
+[**Key Characteristics of a Hypothesis:**]{.underline}
 
 -   **Testable** – It should be possible to confirm or refute the hypothesis using data or experiments.
 
@@ -37,7 +37,7 @@ It serves as the foundation for research and statistical analysis, guiding exper
 
 -   **Based on Prior Knowledge** – A hypothesis is often formed based on previous research, theories, or observations.
 
-**Types of Hypotheses:**
+[**Types of Hypotheses:**]{.underline}
 
 **Null Hypothesis (**$H_0$): Assumes no effect or no relationship between variables
 
@@ -47,7 +47,7 @@ In research, hypothesis testing is conducted to determine if there is enough sta
 
 A **simple hypothesis** and a **composite hypothesis** are two types of statistical hypotheses used in hypothesis testing.
 
-**Simple Hypothesis**
+[**Simple Hypothesis**]{.underline}
 
 A **simple hypothesis** specifies a single value for a parameter.
 It gives a precise statement about the population.
@@ -64,7 +64,7 @@ It gives a precise statement about the population.
     H_1: \mu \neq 50
     $$
 
-**Composite Hypothesis**
+[**Composite Hypothesis**]{.underline}
 
 A **composite hypothesis** does not specify a single value but rather a range or set of possible values for a parameter.
 
@@ -136,11 +136,11 @@ It is dialect of **S language.** which was developed at Bell Laboratories by **J
 
 -   It has a computer language which is convenient to use for statistical and graphical applications.
 
-**Installing R**
+[**Installing R**]{.underline}
 
 -   **Download the R software** from the Comprehensive R Archive Network (CRAN) website:[**https://cran.r-project.org/**](https://cran.r-project.org/){.uri}
 
-**Working with R**
+[**Working with R**]{.underline}
 
 -   Use commandline to type and execute the commands
 
@@ -155,7 +155,7 @@ It is dialect of **S language.** which was developed at Bell Laboratories by **J
 
 -   **Tinn R** is available at [**https://sourceforge.net/projects/tinn‐r/**](https://sourceforge.net/projects/tinn‐r/){.uri}
 
-**Features of R Programming :**
+[**Features of R Programming :**]{.underline}
 
 -   Free to Run and Use
 
@@ -180,7 +180,7 @@ They are :
 
 -   Miscellaneous Operators
 
-**Assignment Operators**
+[**Assignment Operators**]{.underline}
 
 ```{r Assignment Operators, eval=FALSE, message=FALSE, warning=FALSE}
 <-  --> Leftward Assignment
@@ -215,7 +215,7 @@ c = 12
 print(c)
 ```
 
-**Arithmetic Operators**
+[**Arithmetic Operators**]{.underline}
 
 ```{r Arithmetic Operators, eval=FALSE, message=FALSE, warning=FALSE}
 + -> Addition
@@ -241,7 +241,7 @@ Example for Arithmetic Operators:
 5%/%2 # Integer Division
 ```
 
-**Relational Operators**
+[**Relational Operators**]{.underline}
 
 The Result of Relational Operators is always a **Boolean Value** (True or False)
 
@@ -270,7 +270,7 @@ a!=b
 
 \newpage
 
-**Logical Operators:**
+[**Logical Operators:**]{.underline}
 
 Logical operators are used to combine conditional statements.
 it returns a boolean value (True or False)
@@ -308,7 +308,7 @@ a!=10
 a!=20
 ```
 
-**Miscellaneous Operators**
+[**Miscellaneous Operators**]{.underline}
 
 In R, miscellaneous operators are special operators that don't fall into typical arithmetic, logical, or relational categories.
 Some important ones include:
@@ -420,7 +420,7 @@ as.factor() # To change the data type to factor
 
 ```
 
-**Using R as a Calculator**
+[**Using R as a Calculator**]{.underline}
 
 We can use R as a basic calculator to perform arithmetic operations.
 For example, we can add, subtract, multiply, and divide numbers using R.
@@ -487,8 +487,78 @@ cd.. -> To go back to the previous directory
 cd/ -> To go to the root directory(Home)
 cd/mnt/E -> To change the directory to E drive 
 dir ->To list the files in the directory
-mkdir -> To create a new directory
-rmdir -> To remove a directory
+
 
 
 ```
+
+**Folder Creation**
+Their is a command to create a new directory(Folder) and to remove a directory( Folder)
+
+like:
+```{r Folder Creation , eval=FALSE, message=FALSE, warning=FALSE}
+
+mkdir -> To create a new directory(Folder)
+rmdir -> To remove a directory( Folder)
+
+
+```
+
+**File Creation**
+Their is a command to create a new file and to remove a file
+
+like:
+```{r File Creation  , eval=FALSE, message=FALSE, warning=FALSE}
+
+echo "Hello" > hello.txt |--> To create a new file
+type null > hello.txt |--> To create a new file
+copy con hello.txt |--> To create a new file
+del hello.txt |--> To remove a file
+del . |--> To remove all the files in the directory
+
+```
+
+**Repository**
+A repository is a storage space where your project lives.
+It can be local to a folder on your computer or it can be a storage space on GitHub or another online platform.
+
+```{r Repository  , eval=FALSE, message=FALSE, warning=FALSE}
+
+local repository -> Repository in your computer
+Remote repository -> Repository in the cloud (Github)
+
+```
+ Respositories are the timelines of the entire project including the previous changes
+ 
+ **Git Commands**
+ Before using git we need to install git in our system.
+ then you need to configure the git with your username and email id.
+ Code for Configuring the git (Only for the first time)
+ like Registering the git with your username and email id
+ 
+```{r Git Registration  , eval=FALSE, message=FALSE, warning=FALSE}
+git config --global user.name "Username"
+git config --global user.email "Email id"
+```
+
+**Flow Chart of Github**
+ 
+```{r Flow Chart of Github  , eval=FALSE, message=FALSE, warning=FALSE}
+Untracked -> Staged -> Committed -> Uploading
+          |         |            |
+        (add)    (Commit)       (Push)
+```
+
+This is the flow chart of github 
+
+**Git basic Command**
+```{r Git basic Command , eval=FALSE, message=FALSE, warning=FALSE}
+git init                     |---> initializing the git
+git add .                    |---> add everything
+git commit -m "first commit" |---> commit 
+git remote add origin git@github.com:username/<reponame>.git   |--->choosing the git website for loading
+git push -u origin master    |---> pushing the changes to github 
+```
+
+
+

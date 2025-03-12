@@ -90,6 +90,12 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+\fi
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -126,7 +132,7 @@ relationship between two or more variables. It serves as the foundation
 for research and statistical analysis, guiding experiments and
 observations.
 
-\textbf{Key Characteristics of a Hypothesis:}
+\ul{\textbf{Key Characteristics of a Hypothesis:}}
 
 \begin{itemize}
 \item
@@ -143,7 +149,7 @@ observations.
   based on previous research, theories, or observations.
 \end{itemize}
 
-\textbf{Types of Hypotheses:}
+\ul{\textbf{Types of Hypotheses:}}
 
 \textbf{Null Hypothesis (}\(H_0\)): Assumes no effect or no relationship
 between variables
@@ -158,7 +164,7 @@ the alternative hypothesis
 A \textbf{simple hypothesis} and a \textbf{composite hypothesis} are two
 types of statistical hypotheses used in hypothesis testing.
 
-\textbf{Simple Hypothesis}
+\ul{\textbf{Simple Hypothesis}}
 
 A \textbf{simple hypothesis} specifies a single value for a parameter.
 It gives a precise statement about the population.
@@ -180,7 +186,7 @@ It gives a precise statement about the population.
   \]
 \end{itemize}
 
-\textbf{Composite Hypothesis}
+\ul{\textbf{Composite Hypothesis}}
 
 A \textbf{composite hypothesis} does not specify a single value but
 rather a range or set of possible values for a parameter.
@@ -270,7 +276,7 @@ Bell Laboratories by \textbf{John Chambers} and colleagues.
   and graphical applications.
 \end{itemize}
 
-\textbf{Installing R}
+\ul{\textbf{Installing R}}
 
 \begin{itemize}
 \tightlist
@@ -280,7 +286,7 @@ Bell Laboratories by \textbf{John Chambers} and colleagues.
   website:\href{https://cran.r-project.org/}{\textbf{https://cran.r-project.org/}}
 \end{itemize}
 
-\textbf{Working with R}
+\ul{\textbf{Working with R}}
 
 \begin{itemize}
 \item
@@ -301,7 +307,7 @@ Bell Laboratories by \textbf{John Chambers} and colleagues.
   \href{https://sourceforge.net/projects/tinn‐r/}{\textbf{https://sourceforge.net/projects/tinn‐r/}}
 \end{itemize}
 
-\textbf{Features of R Programming :}
+\ul{\textbf{Features of R Programming :}}
 
 \begin{itemize}
 \item
@@ -331,7 +337,7 @@ There are several types of operators in R programming. They are :
   Miscellaneous Operators
 \end{itemize}
 
-\textbf{Assignment Operators}
+\ul{\textbf{Assignment Operators}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -402,7 +408,7 @@ Example for Assignment Operators:
 ## [1] 12
 \end{verbatim}
 
-\textbf{Arithmetic Operators}
+\ul{\textbf{Arithmetic Operators}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -498,7 +504,7 @@ Example for Arithmetic Operators:
 ## [1] 2
 \end{verbatim}
 
-\textbf{Relational Operators}
+\ul{\textbf{Relational Operators}}
 
 The Result of Relational Operators is always a \textbf{Boolean Value}
 (True or False)
@@ -590,7 +596,7 @@ Example for Relational Operators:
 
 \newpage
 
-\textbf{Logical Operators:}
+\ul{\textbf{Logical Operators:}}
 
 Logical operators are used to combine conditional statements. it returns
 a boolean value (True or False)
@@ -688,7 +694,7 @@ Example for Logical Operators:
 ## [1] TRUE
 \end{verbatim}
 
-\textbf{Miscellaneous Operators}
+\ul{\textbf{Miscellaneous Operators}}
 
 In R, miscellaneous operators are special operators that don't fall into
 typical arithmetic, logical, or relational categories. Some important
@@ -856,7 +862,7 @@ of the object.
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{Using R as a Calculator}
+\ul{\textbf{Using R as a Calculator}}
 
 We can use R as a basic calculator to perform arithmetic operations. For
 example, we can add, subtract, multiply, and divide numbers using R.
@@ -955,8 +961,83 @@ Some of the basic commands prompt codes are :
 \NormalTok{cd}\SpecialCharTok{/} \OtherTok{{-}\textgreater{}}\NormalTok{ To go to the root }\FunctionTok{directory}\NormalTok{(Home)}
 \NormalTok{cd}\SpecialCharTok{/}\NormalTok{mnt}\SpecialCharTok{/}\NormalTok{E }\OtherTok{{-}\textgreater{}}\NormalTok{ To change the directory to E drive }
 \NormalTok{dir }\OtherTok{{-}\textgreater{}}\NormalTok{To list the files }\ControlFlowTok{in}\NormalTok{ the directory}
-\NormalTok{mkdir }\OtherTok{{-}\textgreater{}}\NormalTok{ To create a new directory}
-\NormalTok{rmdir }\OtherTok{{-}\textgreater{}}\NormalTok{ To remove a directory}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Folder Creation} Their is a command to create a new
+directory(Folder) and to remove a directory( Folder)
+
+like:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mkdir }\OtherTok{{-}\textgreater{}}\NormalTok{ To create a new }\FunctionTok{directory}\NormalTok{(Folder)}
+\NormalTok{rmdir }\OtherTok{{-}\textgreater{}}\NormalTok{ To remove a }\FunctionTok{directory}\NormalTok{( Folder)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{File Creation} Their is a command to create a new file and to
+remove a file
+
+like:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{echo }\StringTok{"Hello"} \SpecialCharTok{\textgreater{}}\NormalTok{ hello.txt }\SpecialCharTok{|{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To create a new file}
+\NormalTok{type null }\SpecialCharTok{\textgreater{}}\NormalTok{ hello.txt }\SpecialCharTok{|{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To create a new file}
+\NormalTok{copy con hello.txt }\SpecialCharTok{|{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To create a new file}
+\NormalTok{del hello.txt }\SpecialCharTok{|{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To remove a file}
+\NormalTok{del . }\SpecialCharTok{|{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To remove all the files }\ControlFlowTok{in}\NormalTok{ the directory}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Repository} A repository is a storage space where your project
+lives. It can be local to a folder on your computer or it can be a
+storage space on GitHub or another online platform.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{local repository }\OtherTok{{-}\textgreater{}}\NormalTok{ Repository }\ControlFlowTok{in}\NormalTok{ your computer}
+\NormalTok{Remote repository }\OtherTok{{-}\textgreater{}}\NormalTok{ Repository }\ControlFlowTok{in}\NormalTok{ the }\FunctionTok{cloud}\NormalTok{ (Github)}
+\end{Highlighting}
+\end{Shaded}
+
+Respositories are the timelines of the entire project including the
+previous changes
+
+\textbf{Git Commands} Before using git we need to install git in our
+system. then you need to configure the git with your username and email
+id. Code for Configuring the git (Only for the first time) like
+Registering the git with your username and email id
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{git config }\SpecialCharTok{{-}{-}}\NormalTok{global user.name }\StringTok{"Username"}
+\NormalTok{git config }\SpecialCharTok{{-}{-}}\NormalTok{global user.email }\StringTok{"Email id"}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Flow Chart of Github}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Untracked }\OtherTok{{-}\textgreater{}}\NormalTok{ Staged }\OtherTok{{-}\textgreater{}}\NormalTok{ Committed }\OtherTok{{-}\textgreater{}}\NormalTok{ Uploading}
+          \SpecialCharTok{|}         \ErrorTok{|}            \ErrorTok{|}
+\NormalTok{        (add)    (Commit)       (Push)}
+\end{Highlighting}
+\end{Shaded}
+
+This is the flow chart of github
+
+\textbf{Git basic Command}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{git init                     }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ initializing the git}
+\NormalTok{git add .                    }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ add everything}
+\NormalTok{git commit }\SpecialCharTok{{-}}\NormalTok{m }\StringTok{"first commit"} \SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ commit }
+\NormalTok{git remote add origin git}\SpecialCharTok{@}\NormalTok{github.com}\SpecialCharTok{:}\NormalTok{username}\SpecialCharTok{/}\ErrorTok{\textless{}}\NormalTok{reponame}\SpecialCharTok{\textgreater{}}\NormalTok{.git   }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{choosing the git website }\ControlFlowTok{for}\NormalTok{ loading}
+\NormalTok{git push }\SpecialCharTok{{-}}\NormalTok{u origin master    }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ pushing the changes to github }
 \end{Highlighting}
 \end{Shaded}
 
