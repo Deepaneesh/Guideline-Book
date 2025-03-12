@@ -493,9 +493,11 @@ dir ->To list the files in the directory
 ```
 
 **Folder Creation**
+
 Their is a command to create a new directory(Folder) and to remove a directory( Folder)
 
 like:
+
 ```{r Folder Creation , eval=FALSE, message=FALSE, warning=FALSE}
 
 mkdir -> To create a new directory(Folder)
@@ -505,9 +507,11 @@ rmdir -> To remove a directory( Folder)
 ```
 
 **File Creation**
+
 Their is a command to create a new file and to remove a file
 
 like:
+
 ```{r File Creation  , eval=FALSE, message=FALSE, warning=FALSE}
 
 echo "Hello" > hello.txt |--> To create a new file
@@ -518,7 +522,9 @@ del . |--> To remove all the files in the directory
 
 ```
 
+\newpage
 **Repository**
+
 A repository is a storage space where your project lives.
 It can be local to a folder on your computer or it can be a storage space on GitHub or another online platform.
 
@@ -528,37 +534,36 @@ local repository -> Repository in your computer
 Remote repository -> Repository in the cloud (Github)
 
 ```
- Respositories are the timelines of the entire project including the previous changes
- 
- **Git Commands**
- Before using git we need to install git in our system.
- then you need to configure the git with your username and email id.
- Code for Configuring the git (Only for the first time)
- like Registering the git with your username and email id
- 
+
+Respositories are the timelines of the entire project including the previous changes
+
+**Git Commands**
+
+Before using git we need to install git in our system.
+then you need to configure the git with your username and email id.
+Code for Configuring the git (Only for the first time) like Registering the git with your username and email id
+
 ```{r Git Registration  , eval=FALSE, message=FALSE, warning=FALSE}
 git config --global user.name "Username"
 git config --global user.email "Email id"
 ```
 
 **Flow Chart of Github**
- 
+
 ```{r Flow Chart of Github  , eval=FALSE, message=FALSE, warning=FALSE}
 Untracked -> Staged -> Committed -> Uploading
           |         |            |
-        (add)    (Commit)       (Push)
+        (add)    (Commit)      (Push)
 ```
 
-This is the flow chart of github 
+This is the flow chart of github
 
 **Git basic Command**
+
 ```{r Git basic Command , eval=FALSE, message=FALSE, warning=FALSE}
 git init                     |---> initializing the git
 git add .                    |---> add everything
 git commit -m "first commit" |---> commit 
-git remote add origin git@github.com:username/<reponame>.git   |--->choosing the git website for loading
-git push -u origin master    |---> pushing the changes to github 
+git remote add origin git@github.com:username/<reponame>.git |--->choosing the git website
+git push -u origin master   |---> pushing the changes to the master 
 ```
-
-
-
