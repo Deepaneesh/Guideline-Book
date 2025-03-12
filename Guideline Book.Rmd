@@ -420,7 +420,9 @@ as.factor() # To change the data type to factor
 
 ```
 
-**Using R as a Calculator** We can use R as a basic calculator to perform arithmetic operations.
+**Using R as a Calculator**
+
+We can use R as a basic calculator to perform arithmetic operations.
 For example, we can add, subtract, multiply, and divide numbers using R.
 
 **Multiple operators (BODMAS):**
@@ -430,18 +432,23 @@ For example, we can add, subtract, multiply, and divide numbers using R.
 ```
 
 **Concatenate:**
+
 Still now we have seen that using single value for the operation.
-But we can also use multiple values for the operation. by using concatenate.
+But we can also use multiple values for the operation.
+by using concatenate.
+
 ```{r concatenate, eval=FALSE, message=FALSE, warning=FALSE}
 x=c(1,2,3,4.......)
 allow us to use multiple values for the operation
 ```
+
 While using concatenate we can use multiple values but in a same data type
 
 ```{r concatenate ,echo=TRUE, message=FALSE, warning=FALSE}
  x=c(1,2,3,4) # Multiple values
 print(x)
 ```
+
 \newpage
 
 # Git / GitHub
