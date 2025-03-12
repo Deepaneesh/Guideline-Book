@@ -1,0 +1,135 @@
+---
+title: "Guideline Book"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+author: "Deepaneesh R V"
+output:
+ pdf_document:
+  keep_tex: yes
+  toc: yes
+  toc_depth: 3
+  number_sections: yes
+  fig_caption: yes
+  fig_height: 5
+  fig_width: 7
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
+
+# HYOTHESIS FOR TEST
+
+In general, a hypothesis is a testable statement or assumption about a relationship between two or more variables. It serves as the foundation for research and statistical analysis, guiding experiments and observations.
+
+**Key Characteristics of a Hypothesis:**
+
+-   **Testable** – It should be possible to confirm or refute the hypothesis using data or experiments.
+
+-   **Falsifiable** – There should be a possibility of proving it wrong.
+
+-   **Specific** – It should clearly define variables and their expected relationship.
+
+-   **Based on Prior Knowledge** – A hypothesis is often formed based on previous research, theories, or observations.
+
+**Types of Hypotheses:**
+
+**Null Hypothesis (**$H_0$): Assumes no effect or no relationship between variables
+
+**Alternative Hypothesis (**$H_1$): Suggests a relationship or effect exists
+
+In research, hypothesis testing is conducted to determine if there is enough statistical evidence to reject the null hypothesis in favor of the alternative hypothesis
+
+A **simple hypothesis** and a **composite hypothesis** are two types of statistical hypotheses used in hypothesis testing.
+
+**Simple Hypothesis**
+
+A **simple hypothesis** specifies a single value for a parameter. It gives a precise statement about the population.
+
+**Example:**
+
+-   **Null Hypothesis** ($H_0$): The average height of students is exactly 50 cm.\
+    $$
+    H_0: \mu = 50
+    $$
+
+-   **Alternative Hypothesis** ($H_1$): The average height is different from 50 cm.\
+    $$
+    H_1: \mu \neq 50
+    $$
+
+**Composite Hypothesis**
+
+A **composite hypothesis** does not specify a single value but rather a range or set of possible values for a parameter.
+
+**Example:**
+
+-   **Null Hypothesis** ($H_0$): The average height is at least 50 cm.\
+    $$
+    H_0: \mu \geq 50
+    $$
+
+-   **Alternative Hypothesis** ($H_1$): The average height is less than 50 cm.\
+    $$
+    H_1: \mu < 50
+    $$
+
+Here, the null hypothesis is **composite** because it includes multiple values ($\mu$ can be 50, 51, 52, etc.).
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars, eval=FALSE, message=FALSE, warning=FALSE}
+summary(cars)
+hello
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+\newpage
+# Git / GitHub
+
+**Git** Terminology Features and Advantages of Git TerminologyGit is a free, open-source **version control system (VCS)** that helps manage source code and its development history. It's the most widely used VCS in the world
+
+**GitHub** is a website that helps developers store, manage, and collaborate on software projects.It's a social network for programmers that encourages collaboration and sharing of code . Github is an online platform that allows you to store remote repositories of your projects (Interactable)
+
+## SOURCE CONTROL / VERSION CONTROL
+
+-   Some System used for tracking your file progress over time .
+-   It is usually saved in a series of snapshots and branches, which you can move back and forth between.
+-   Prevent against data loss / damage by Creating backup copies of your work.
+
+Linux is the major / huge project in github Git is a Source Control Software . It was created by the same person who created Linux **Linus Torvalds**
+
+## Command Prompt 
+Before using git/github we need to have a basic idea about command prompt . Command prompt is a command line interpreter application available in most Windows operating systems. It's used to execute entered commands. Most of those commands automate tasks via scripts and batch files, perform advanced administrative functions, and troubleshoot or solve certain kinds of Windows issues.
+
+Some of the basic commands prompt codes are :
+```{r Basic command , eval=FALSE, message=FALSE, warning=FALSE}
+E: -> To change the drive to E
+cd -> To change the directory
+
+# some time we have space in the directory name so we need to use double quotes
+cd "C:\Users\Deepaneesh R V\Documents" -> To change the directory to Documents
+cd.. -> To go back to the previous directory
+cd/ -> To go to the root directory(Home)
+cd/mnt/E -> To change the directory to E drive 
+dir ->To list the files in the directory
+mkdir -> To create a new directory
+rmdir -> To remove a directory
+
+
+```
+
