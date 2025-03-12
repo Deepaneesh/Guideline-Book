@@ -233,6 +233,672 @@ chunk to prevent printing of the R code that generated the plot.
 
 \newpage
 
+\section{R PROGRAMMING}\label{r-programming}
+
+\textbf{R} is a programming language and software environment for
+statistical computing and graphics. It is widely used among
+statisticians and data miners for developing statistical software and
+data analysis. Use of a software is desirable and moreover an essential
+part of any analysis. It supports many free packages which helps the
+data scientist and analyst.It is a \textbf{free software}.
+
+R Programming is Developed by \textbf{Ross Ihaka and Robert Gentleman}
+in 1993. It is dialect of \textbf{S language.} which was developed at
+Bell Laboratories by \textbf{John Chambers} and colleagues.
+
+\textbf{what is R ?}
+
+\begin{itemize}
+\item
+  R is an environment for data manipulation, statistical computing,
+  graphics display and data analysis.
+\item
+  Effective data handling and storage of outputs is possible.
+\item
+  Simple as well as complicated calculations are possible.
+\item
+  Simulations are possible.
+\item
+  Graphical display on‐screen and hard copy are possible.
+\item
+  Programming language is effective which includes all possibilities
+  just like any other good programming language.
+\item
+  R has a statistical computing environment.
+\item
+  It has a computer language which is convenient to use for statistical
+  and graphical applications.
+\end{itemize}
+
+\textbf{Installing R}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Download the R software} from the Comprehensive R Archive
+  Network (CRAN)
+  website:\href{https://cran.r-project.org/}{\textbf{https://cran.r-project.org/}}
+\end{itemize}
+
+\textbf{Working with R}
+
+\begin{itemize}
+\item
+  Use commandline to type and execute the commands
+\item
+  Some free software like \textbf{R Studio, Tinn R} etc. are also
+  available to work with R software. It is an interface between R and us
+  .
+\item
+  Such software are more useful for beginners.
+\item
+  It makes coding and execution of programmes easier
+\item
+  \textbf{RStudio} is available at
+  \href{https://www.rstudio.com/}{\textbf{https://www.rstudio.com/}}
+\item
+  \textbf{Tinn R} is available at
+  \href{https://sourceforge.net/projects/tinn‐r/}{\textbf{https://sourceforge.net/projects/tinn‐r/}}
+\end{itemize}
+
+\textbf{Features of R Programming :}
+
+\begin{itemize}
+\item
+  Free to Run and Use
+\item
+  Free to Study
+\item
+  Free to Share
+\item
+  Free to update
+\end{itemize}
+
+\subsection{R Operators}\label{r-operators}
+
+There are several types of operators in R programming. They are :
+
+\begin{itemize}
+\item
+  Assignment Operators
+\item
+  Arithmetic Operators
+\item
+  Relational Operators
+\item
+  Logical Operators
+\item
+  Miscellaneous Operators
+\end{itemize}
+
+\textbf{Assignment Operators}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OtherTok{\textless{}{-}}  \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Leftward Assignment}
+\OtherTok{{-}\textgreater{}}  \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Rightward Assignment}
+\OtherTok{{-}\textgreater{}\textgreater{}} \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Rightward Assignment}
+\OtherTok{=}   \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Assignment}
+\end{Highlighting}
+\end{Shaded}
+
+Example for Assignment Operators:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Leftward Assignment:}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{a1 }\OtherTok{\textless{}\textless{}{-}} \DecValTok{100}
+\FunctionTok{print}\NormalTok{(}\FunctionTok{c}\NormalTok{(a,a1))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  10 100
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Rightward Assignment:}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{11} \OtherTok{{-}\textgreater{}}\NormalTok{ b}
+\DecValTok{111} \OtherTok{{-}\textgreater{}\textgreater{}}\NormalTok{ b1}
+\FunctionTok{print}\NormalTok{(}\FunctionTok{c}\NormalTok{(b,b1))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  11 111
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Equal Assignment:}
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{c }\OtherTok{=} \DecValTok{12}
+\FunctionTok{print}\NormalTok{(c)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12
+\end{verbatim}
+
+\textbf{Arithmetic Operators}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialCharTok{+} \OtherTok{{-}\textgreater{}}\NormalTok{ Addition}
+\SpecialCharTok{{-}} \OtherTok{{-}\textgreater{}}\NormalTok{ Subtraction }
+\SpecialCharTok{*} \OtherTok{{-}\textgreater{}}\NormalTok{ Multiplication}
+\SpecialCharTok{/} \OtherTok{{-}\textgreater{}}\NormalTok{ Division}
+\SpecialCharTok{**}\NormalTok{ or }\SpecialCharTok{\^{}} \OtherTok{{-}\textgreater{}}\NormalTok{ For power or Exponential}
+\SpecialCharTok{\%\%} \OtherTok{{-}\textgreater{}}\NormalTok{ Modulus}
+\SpecialCharTok{\%/\%} \OtherTok{{-}\textgreater{}}\NormalTok{ Integer Division}
+\end{Highlighting}
+\end{Shaded}
+
+Example for Arithmetic Operators:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1}\SpecialCharTok{+}\DecValTok{1} \CommentTok{\# Addition}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{2{-}1} \CommentTok{\# Subtraction}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{3}\SpecialCharTok{*}\DecValTok{2} \CommentTok{\# Multiplication}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{4}\SpecialCharTok{/}\DecValTok{2} \CommentTok{\# Division}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{5}\SpecialCharTok{\^{}}\DecValTok{2} \CommentTok{\# Exponential}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 25
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{5}\SpecialCharTok{**}\DecValTok{2} \CommentTok{\# Exponential}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 25
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{5}\SpecialCharTok{\%\%}\DecValTok{2} \CommentTok{\# Modulus (the remainder will be the result)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{5}\SpecialCharTok{\%/\%}\DecValTok{2} \CommentTok{\# Integer Division}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2
+\end{verbatim}
+
+\textbf{Relational Operators}
+
+The Result of Relational Operators is always a \textbf{Boolean Value}
+(True or False)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialCharTok{\textless{}}  \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Less than }
+\SpecialCharTok{\textgreater{}}  \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Greater than}
+\SpecialCharTok{\textless{}=} \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Less than or equal to}
+\SpecialCharTok{\textgreater{}=} \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Greater than or equal to}
+\SpecialCharTok{==} \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Equal to }
+\SpecialCharTok{!=} \SpecialCharTok{{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ Not Equal to }
+\end{Highlighting}
+\end{Shaded}
+
+Example for Relational Operators:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{=} \DecValTok{10}
+\NormalTok{b}\OtherTok{=}\DecValTok{20}
+\FunctionTok{print}\NormalTok{(}\FunctionTok{c}\NormalTok{(a,b))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10 20
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{\textless{}}\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{\textgreater{}}\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{\textless{}=}\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{\textgreater{}=}\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{==}\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{!=}\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\newpage
+
+\textbf{Logical Operators:}
+
+Logical operators are used to combine conditional statements. it returns
+a boolean value (True or False)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialCharTok{\&} \OtherTok{{-}\textgreater{}}\NormalTok{ AND}
+\SpecialCharTok{\&\&} \OtherTok{{-}\textgreater{}}\NormalTok{ Logical And}
+\SpecialCharTok{|} \OtherTok{{-}\textgreater{}}\NormalTok{OR}
+\SpecialCharTok{||} \OtherTok{{-}\textgreater{}}\NormalTok{ Logical OR}
+\SpecialCharTok{!} \OtherTok{{-}\textgreater{}}\NormalTok{ NOT}
+\end{Highlighting}
+\end{Shaded}
+
+Example for Logical Operators:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OtherTok{=} \DecValTok{10}
+\NormalTok{b}\OtherTok{=}\DecValTok{20}
+\FunctionTok{print}\NormalTok{(}\FunctionTok{c}\NormalTok{(a,b))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10 20
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# And Operator}
+\CommentTok{\# The Statement both should be true to get the result as true}
+\CommentTok{\# Any one of the statement is false then the result will be \#false}
+\NormalTok{a}\SpecialCharTok{==}\DecValTok{10} \SpecialCharTok{\&}\NormalTok{ b}\SpecialCharTok{==}\DecValTok{20}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{==}\DecValTok{10} \SpecialCharTok{\&}\NormalTok{ b}\SpecialCharTok{==}\DecValTok{30}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# OR Operator}
+\CommentTok{\# The Statement any one should be true to get the result as \#true}
+\CommentTok{\# Both the statement is false then the result will be false}
+\NormalTok{a}\SpecialCharTok{==}\DecValTok{10} \SpecialCharTok{|}\NormalTok{ b}\SpecialCharTok{==}\DecValTok{30}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{==}\DecValTok{20} \SpecialCharTok{|}\NormalTok{ b}\SpecialCharTok{==}\DecValTok{30}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# NOT Operator}
+\CommentTok{\# The Statement should be false to get the result as true}
+\CommentTok{\# The Statement should be true to get the result as false}
+\NormalTok{a}\SpecialCharTok{!=}\DecValTok{10}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a}\SpecialCharTok{!=}\DecValTok{20}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\textbf{Miscellaneous Operators}
+
+In R, miscellaneous operators are special operators that don't fall into
+typical arithmetic, logical, or relational categories. Some important
+ones include:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ x }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{)}
+\NormalTok{y }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{)}
+\NormalTok{x }\SpecialCharTok{\%in\%}\NormalTok{ y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] FALSE  TRUE FALSE  TRUE FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1}\SpecialCharTok{:}\DecValTok{5} \CommentTok{\# Sequence from 1 to 5}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1 2 3 4 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{by=}\DecValTok{2}\NormalTok{) }\CommentTok{\# With Difference of 2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1 3 5 7 9
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{seq}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{length=}\DecValTok{3}\NormalTok{) }\CommentTok{\# the output should be 3 numbers between 1 to 10  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  1.0  5.5 10.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+ \CommentTok{\# $}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Name =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{), }\AttributeTok{Age =} \FunctionTok{c}\NormalTok{(}\DecValTok{25}\NormalTok{, }\DecValTok{30}\NormalTok{))}
+\NormalTok{df}\SpecialCharTok{$}\NormalTok{Name}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "A" "B"
+\end{verbatim}
+
+Data Types in R In R, data types are classified into two type.
+
+\begin{itemize}
+\item
+  Object
+\item
+  Attributes
+\end{itemize}
+
+There are 5 basic data types in Object:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Numeric
+\item
+  Integer
+\item
+  Complex
+\item
+  Logical
+\item
+  Character
+\end{enumerate}
+
+There are 6 basic data types in Attributes:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Vectors
+\item
+  Factors
+\item
+  Lists
+\item
+  Arrays / Matrics
+\item
+  Data Frames
+\item
+  Class
+\end{enumerate}
+
+We can use \texttt{Typeof()} function to check the data type of the
+object. The Result for typeof function will be
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{integer }\OtherTok{{-}\textgreater{}}\NormalTok{ integer}
+\NormalTok{character }\OtherTok{{-}\textgreater{}}\NormalTok{ Character}
+\NormalTok{logical }\OtherTok{{-}\textgreater{}}\NormalTok{ Logical}
+\NormalTok{numeric }\OtherTok{{-}\textgreater{}}\NormalTok{ Double}
+\NormalTok{complex }\OtherTok{{-}\textgreater{}}\NormalTok{ Complex}
+\NormalTok{Factor }\OtherTok{{-}\textgreater{}}\NormalTok{ Factor}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+ \CommentTok{\# $}
+\NormalTok{a}\OtherTok{=}\DecValTok{10}
+\FunctionTok{typeof}\NormalTok{(a)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "double"
+\end{verbatim}
+
+\newpage
+
+we can use as. , is. functions to check and change the data type
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# is function is used to check the data type}
+\CommentTok{\# if the data type is correct then it will return as true otherwise False}
+\FunctionTok{is.numeric}\NormalTok{()}
+\FunctionTok{is.integer}\NormalTok{()}
+\FunctionTok{is.character}\NormalTok{()}
+\FunctionTok{is.logical}\NormalTok{()}
+\FunctionTok{is.complex}\NormalTok{()}
+\FunctionTok{is.factor}\NormalTok{()}
+\FunctionTok{is.vector}\NormalTok{()}
+\FunctionTok{is.list}\NormalTok{()}
+\FunctionTok{is.matrix}\NormalTok{()}
+\FunctionTok{is.data.frame}\NormalTok{()}
+\FunctionTok{is.array}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+Like this there are more functions available in R to check the data type
+of the object.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# as function is used to change the data type}
+\FunctionTok{as.numeric}\NormalTok{() }\CommentTok{\# To change the data type to numeric}
+\FunctionTok{as.integer}\NormalTok{() }\CommentTok{\# To change the data type to integer}
+\FunctionTok{as.character}\NormalTok{() }\CommentTok{\# To change the data type to character}
+\FunctionTok{as.logical}\NormalTok{() }\CommentTok{\# To change the data type to logical}
+\FunctionTok{as.matrix}\NormalTok{() }\CommentTok{\# To change the data type to matrix}
+\FunctionTok{as.data.frame}\NormalTok{() }\CommentTok{\# To change the data type to data frame}
+\FunctionTok{as.vector}\NormalTok{() }\CommentTok{\# To change the data type to vector}
+\FunctionTok{as.factor}\NormalTok{() }\CommentTok{\# To change the data type to factor}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Using R as a Calculator} We can use R as a basic calculator to
+perform arithmetic operations. For example, we can add, subtract,
+multiply, and divide numbers using R.
+
+\textbf{Multiple operators (BODMAS):}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+ \DecValTok{6}\SpecialCharTok{+}\DecValTok{5{-}4}\SpecialCharTok{*}\DecValTok{3}\SpecialCharTok{+}\DecValTok{2}\SpecialCharTok{/}\DecValTok{4}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -0.5
+\end{verbatim}
+
+\textbf{Concatenate:} Still now we have seen that using single value for
+the operation. But we can also use multiple values for the operation. by
+using concatenate.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x}\OtherTok{=}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{.......)}
+\NormalTok{allow us to use multiple values }\ControlFlowTok{for}\NormalTok{ the operation}
+\end{Highlighting}
+\end{Shaded}
+
+While using concatenate we can use multiple values but in a same data
+type
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ x}\OtherTok{=}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{) }\CommentTok{\# Multiple values}
+\FunctionTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1 2 3 4
+\end{verbatim}
+
+\newpage
+
 \section{Git / GitHub}\label{git-github}
 
 \textbf{Git} Terminology Features and Advantages of Git TerminologyGit

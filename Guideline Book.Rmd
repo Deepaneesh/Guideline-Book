@@ -11,6 +11,9 @@ output:
   fig_caption: yes
   fig_height: 5
   fig_width: 7
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{r setup, include=FALSE}
@@ -21,7 +24,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # HYOTHESIS FOR TEST
 
-In general, a hypothesis is a testable statement or assumption about a relationship between two or more variables. It serves as the foundation for research and statistical analysis, guiding experiments and observations.
+In general, a hypothesis is a testable statement or assumption about a relationship between two or more variables.
+It serves as the foundation for research and statistical analysis, guiding experiments and observations.
 
 **Key Characteristics of a Hypothesis:**
 
@@ -45,7 +49,8 @@ A **simple hypothesis** and a **composite hypothesis** are two types of statisti
 
 **Simple Hypothesis**
 
-A **simple hypothesis** specifies a single value for a parameter. It gives a precise statement about the population.
+A **simple hypothesis** specifies a single value for a parameter.
+It gives a precise statement about the population.
 
 **Example:**
 
@@ -79,9 +84,12 @@ Here, the null hypothesis is **composite** because it includes multiple values (
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is an R Markdown document.
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
+For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+You can embed an R code chunk like this:
 
 ```{r cars, eval=FALSE, message=FALSE, warning=FALSE}
 summary(cars)
@@ -99,11 +107,350 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 \newpage
+
+# R PROGRAMMING
+
+**R** is a programming language and software environment for statistical computing and graphics.
+It is widely used among statisticians and data miners for developing statistical software and data analysis.
+Use of a software is desirable and moreover an essential part of any analysis.
+It supports many free packages which helps the data scientist and analyst.It is a **free software**.
+
+R Programming is Developed by **Ross Ihaka and Robert Gentleman** in 1993.
+It is dialect of **S language.** which was developed at Bell Laboratories by **John Chambers** and colleagues.
+
+**what is R ?**
+
+-   R is an environment for data manipulation, statistical computing, graphics display and data analysis.
+
+-   Effective data handling and storage of outputs is possible.
+
+-   Simple as well as complicated calculations are possible.
+
+-   Simulations are possible.
+
+-   Graphical display on‐screen and hard copy are possible.
+
+-   Programming language is effective which includes all possibilities just like any other good programming language.
+
+-   R has a statistical computing environment.
+
+-   It has a computer language which is convenient to use for statistical and graphical applications.
+
+**Installing R**
+
+-   **Download the R software** from the Comprehensive R Archive Network (CRAN) website:[**https://cran.r-project.org/**](https://cran.r-project.org/){.uri}
+
+**Working with R**
+
+-   Use commandline to type and execute the commands
+
+-   Some free software like **R Studio, Tinn R** etc. are also available to work with R software.
+    It is an interface between R and us .
+
+-   Such software are more useful for beginners.
+
+-   It makes coding and execution of programmes easier
+
+-   **RStudio** is available at [**https://www.rstudio.com/**](https://www.rstudio.com/){.uri}
+
+-   **Tinn R** is available at [**https://sourceforge.net/projects/tinn‐r/**](https://sourceforge.net/projects/tinn‐r/){.uri}
+
+**Features of R Programming :**
+
+-   Free to Run and Use
+
+-   Free to Study
+
+-   Free to Share
+
+-   Free to update
+
+## R Operators
+
+There are several types of operators in R programming.
+They are :
+
+-   Assignment Operators
+
+-   Arithmetic Operators
+
+-   Relational Operators
+
+-   Logical Operators
+
+-   Miscellaneous Operators
+
+**Assignment Operators**
+
+```{r Assignment Operators, eval=FALSE, message=FALSE, warning=FALSE}
+<-  --> Leftward Assignment
+->  --> Rightward Assignment
+->> --> Rightward Assignment
+=   --> Assignment
+
+```
+
+Example for Assignment Operators:
+
+1.  **Leftward Assignment:**
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+a <- 10
+a1 <<- 100
+print(c(a,a1))
+```
+
+2.  **Rightward Assignment:**
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+11 -> b
+111 ->> b1
+print(c(b,b1))
+```
+
+3.  **Equal Assignment:**
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+c = 12
+print(c)
+```
+
+**Arithmetic Operators**
+
+```{r Arithmetic Operators, eval=FALSE, message=FALSE, warning=FALSE}
++ -> Addition
+- -> Subtraction 
+* -> Multiplication
+/ -> Division
+** or ^ -> For power or Exponential
+%% -> Modulus
+%/% -> Integer Division
+
+```
+
+Example for Arithmetic Operators:
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+1+1 # Addition
+2-1 # Subtraction
+3*2 # Multiplication
+4/2 # Division
+5^2 # Exponential
+5**2 # Exponential
+5%%2 # Modulus (the remainder will be the result)
+5%/%2 # Integer Division
+```
+
+**Relational Operators**
+
+The Result of Relational Operators is always a **Boolean Value** (True or False)
+
+```{r Relational Operators, eval=FALSE, message=FALSE, warning=FALSE}
+<  --> Less than 
+>  --> Greater than
+<= --> Less than or equal to
+>= --> Greater than or equal to
+== --> Equal to 
+!= --> Not Equal to 
+```
+
+Example for Relational Operators:
+
+```{r Relational Operators ,echo=TRUE, message=FALSE, warning=FALSE}
+a = 10
+b=20
+print(c(a,b))
+a<b
+a>b
+a<=b
+a>=b
+a==b
+a!=b
+```
+
+\newpage
+
+**Logical Operators:**
+
+Logical operators are used to combine conditional statements.
+it returns a boolean value (True or False)
+
+```{r Logical Operators, eval=FALSE, message=FALSE, warning=FALSE}
+& -> AND
+&& -> Logical And
+| ->OR
+|| -> Logical OR
+! -> NOT
+```
+
+Example for Logical Operators:
+
+```{r Logical Operators ,echo=TRUE, message=FALSE, warning=FALSE}
+a = 10
+b=20
+print(c(a,b))
+# And Operator
+# The Statement both should be true to get the result as true
+# Any one of the statement is false then the result will be #false
+a==10 & b==20
+a==10 & b==30
+
+# OR Operator
+# The Statement any one should be true to get the result as #true
+# Both the statement is false then the result will be false
+a==10 | b==30
+a==20 | b==30
+
+# NOT Operator
+# The Statement should be false to get the result as true
+# The Statement should be true to get the result as false
+a!=10
+a!=20
+```
+
+**Miscellaneous Operators**
+
+In R, miscellaneous operators are special operators that don't fall into typical arithmetic, logical, or relational categories.
+Some important ones include:
+
+```{r Matching Operator ,echo=TRUE, message=FALSE, warning=FALSE}
+ x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 6)
+x %in% y
+```
+
+```{r Sequence Operator ,echo=TRUE, message=FALSE, warning=FALSE}
+1:5 # Sequence from 1 to 5
+seq(1,10,by=2) # With Difference of 2
+seq(1,10,length=3) # the output should be 3 numbers between 1 to 10  
+```
+
+```{r List or Data Frame Extraction ,echo=TRUE, message=FALSE, warning=FALSE}
+ # $
+df <- data.frame(Name = c("A", "B"), Age = c(25, 30))
+df$Name
+```
+
+Data Types in R In R, data types are classified into two type.
+
+-   Object
+
+-   Attributes
+
+There are 5 basic data types in Object:
+
+1.  Numeric
+
+2.  Integer
+
+3.  Complex
+
+4.  Logical
+
+5.  Character
+
+There are 6 basic data types in Attributes:
+
+1.  Vectors
+
+2.  Factors
+
+3.  Lists
+
+4.  Arrays / Matrics
+
+5.  Data Frames
+
+6.  Class
+
+We can use `Typeof()` function to check the data type of the object.
+The Result for typeof function will be
+
+```{r Typeof(), eval=FALSE, message=FALSE, warning=FALSE}
+integer -> integer
+character -> Character
+logical -> Logical
+numeric -> Double
+complex -> Complex
+Factor -> Factor
+
+```
+
+```{r Typeof() ,echo=TRUE, message=FALSE, warning=FALSE}
+ # $
+a=10
+typeof(a)
+```
+
+\newpage
+
+we can use as.
+, is. functions to check and change the data type
+
+```{r is ,eval=FALSE, message=FALSE, warning=FALSE}
+# is function is used to check the data type
+# if the data type is correct then it will return as true otherwise False
+is.numeric()
+is.integer()
+is.character()
+is.logical()
+is.complex()
+is.factor()
+is.vector()
+is.list()
+is.matrix()
+is.data.frame()
+is.array()
+
+```
+
+Like this there are more functions available in R to check the data type of the object.
+
+```{r as., eval=FALSE, message=FALSE, warning=FALSE}
+# as function is used to change the data type
+as.numeric() # To change the data type to numeric
+as.integer() # To change the data type to integer
+as.character() # To change the data type to character
+as.logical() # To change the data type to logical
+as.matrix() # To change the data type to matrix
+as.data.frame() # To change the data type to data frame
+as.vector() # To change the data type to vector
+as.factor() # To change the data type to factor
+
+
+```
+
+**Using R as a Calculator** We can use R as a basic calculator to perform arithmetic operations.
+For example, we can add, subtract, multiply, and divide numbers using R.
+
+**Multiple operators (BODMAS):**
+
+```{r Multiple operators (BODMAS) ,echo=TRUE, message=FALSE, warning=FALSE}
+ 6+5-4*3+2/4
+```
+
+**Concatenate:**
+Still now we have seen that using single value for the operation.
+But we can also use multiple values for the operation. by using concatenate.
+```{r concatenate, eval=FALSE, message=FALSE, warning=FALSE}
+x=c(1,2,3,4.......)
+allow us to use multiple values for the operation
+```
+While using concatenate we can use multiple values but in a same data type
+
+```{r concatenate ,echo=TRUE, message=FALSE, warning=FALSE}
+ x=c(1,2,3,4) # Multiple values
+print(x)
+```
+\newpage
+
 # Git / GitHub
 
-**Git** Terminology Features and Advantages of Git TerminologyGit is a free, open-source **version control system (VCS)** that helps manage source code and its development history. It's the most widely used VCS in the world
+**Git** Terminology Features and Advantages of Git TerminologyGit is a free, open-source **version control system (VCS)** that helps manage source code and its development history.
+It's the most widely used VCS in the world
 
-**GitHub** is a website that helps developers store, manage, and collaborate on software projects.It's a social network for programmers that encourages collaboration and sharing of code . Github is an online platform that allows you to store remote repositories of your projects (Interactable)
+**GitHub** is a website that helps developers store, manage, and collaborate on software projects.It's a social network for programmers that encourages collaboration and sharing of code .
+Github is an online platform that allows you to store remote repositories of your projects (Interactable)
 
 ## SOURCE CONTROL / VERSION CONTROL
 
@@ -111,12 +458,18 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 -   It is usually saved in a series of snapshots and branches, which you can move back and forth between.
 -   Prevent against data loss / damage by Creating backup copies of your work.
 
-Linux is the major / huge project in github Git is a Source Control Software . It was created by the same person who created Linux **Linus Torvalds**
+Linux is the major / huge project in github Git is a Source Control Software .
+It was created by the same person who created Linux **Linus Torvalds**
 
-## Command Prompt 
-Before using git/github we need to have a basic idea about command prompt . Command prompt is a command line interpreter application available in most Windows operating systems. It's used to execute entered commands. Most of those commands automate tasks via scripts and batch files, perform advanced administrative functions, and troubleshoot or solve certain kinds of Windows issues.
+## Command Prompt
+
+Before using git/github we need to have a basic idea about command prompt .
+Command prompt is a command line interpreter application available in most Windows operating systems.
+It's used to execute entered commands.
+Most of those commands automate tasks via scripts and batch files, perform advanced administrative functions, and troubleshoot or solve certain kinds of Windows issues.
 
 Some of the basic commands prompt codes are :
+
 ```{r Basic command , eval=FALSE, message=FALSE, warning=FALSE}
 E: -> To change the drive to E
 cd -> To change the directory
@@ -132,4 +485,3 @@ rmdir -> To remove a directory
 
 
 ```
-
