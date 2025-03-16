@@ -451,7 +451,9 @@ print(x)
 
 \newpage
 
-# Git / GitHub
+# GIT & GITHUB
+
+## Git / GitHub
 
 **Git** Terminology Features and Advantages of Git TerminologyGit is a free, open-source **version control system (VCS)** that helps manage source code and its development history.
 It's the most widely used VCS in the world
@@ -459,7 +461,7 @@ It's the most widely used VCS in the world
 **GitHub** is a website that helps developers store, manage, and collaborate on software projects.It's a social network for programmers that encourages collaboration and sharing of code .
 Github is an online platform that allows you to store remote repositories of your projects (Interactable)
 
-## SOURCE CONTROL / VERSION CONTROL
+## Source Control / Version Control
 
 -   Some System used for tracking your file progress over time .
 -   It is usually saved in a series of snapshots and branches, which you can move back and forth between.
@@ -523,8 +525,8 @@ del . |--> To remove all the files in the directory
 ```
 
 \newpage
-##Github commands
-**Repository**
+
+##Github commands **Repository**
 
 A repository is a storage space where your project lives.
 It can be local to a folder on your computer or it can be a storage space on GitHub or another online platform.
