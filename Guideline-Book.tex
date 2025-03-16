@@ -211,32 +211,6 @@ rather a range or set of possible values for a parameter.
 Here, the null hypothesis is \textbf{composite} because it includes
 multiple values (\(\mu\) can be 50, 51, 52, etc.).
 
-\subsection{R Markdown}\label{r-markdown}
-
-This is an R Markdown document. Markdown is a simple formatting syntax
-for authoring HTML, PDF, and MS Word documents. For more details on
-using R Markdown see \url{http://rmarkdown.rstudio.com}.
-
-When you click the \textbf{Knit} button a document will be generated
-that includes both content as well as the output of any embedded R code
-chunks within the document. You can embed an R code chunk like this:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{summary}\NormalTok{(cars)}
-\NormalTok{hello}
-\end{Highlighting}
-\end{Shaded}
-
-\subsection{Including Plots}\label{including-plots}
-
-You can also embed plots, for example:
-
-\includegraphics{Guideline-Book_files/figure-latex/pressure-1.pdf}
-
-Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
-chunk to prevent printing of the R code that generated the plot.
-
 \newpage
 
 \section{R PROGRAMMING}\label{r-programming}
@@ -754,7 +728,9 @@ ones include:
 ## [1] "A" "B"
 \end{verbatim}
 
-Data Types in R In R, data types are classified into two type.
+\subsection{Data types in R}\label{data-types-in-r}
+
+Data Types in R , data types are classified into two type.
 
 \begin{itemize}
 \item
@@ -862,7 +838,7 @@ of the object.
 \end{Highlighting}
 \end{Shaded}
 
-\ul{\textbf{Using R as a Calculator}}
+\subsection{R for calculations}\label{r-for-calculations}
 
 We can use R as a basic calculator to perform arithmetic operations. For
 example, we can add, subtract, multiply, and divide numbers using R.
@@ -903,6 +879,266 @@ type
 
 \begin{verbatim}
 ## [1] 1 2 3 4
+\end{verbatim}
+
+\textbf{Some Basic Commands in R:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+ \FunctionTok{rm}\NormalTok{(x) }\CommentTok{\# To remove the variable}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{q}\NormalTok{() }\CommentTok{\# To quit the R}
+\end{Highlighting}
+\end{Shaded}
+
+\newpage
+
+\# : The character \# marks the beginning of a commend
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# this is command x=12}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Power operators with vector versus scalar}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{)}\SpecialCharTok{\^{}}\DecValTok{2} \CommentTok{\# Power operator with vector}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  9 16 25 36
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{)}\SpecialCharTok{\^{}}\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{) }\CommentTok{\# Power operator with vector}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]   9  64  25 216
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{)}\SpecialCharTok{\^{}}\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{) }\CommentTok{\# Power operator with vector with warning}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in c(2, 3, 4, 5)^c(3, 4, 5): longer object length is not a multiple of
+## shorter object length
+\end{verbatim}
+
+\begin{verbatim}
+## [1]    8   81 1024  125
+\end{verbatim}
+
+in general warning and error are different
+
+\begin{itemize}
+\item
+  \textbf{Warning} is a message that is displayed when the code is
+  executed
+\item
+  \textbf{Error} is a message that is displayed when the code is not
+  executed
+\end{itemize}
+
+\textbf{Multiplication with vector versus scalar}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{) }\SpecialCharTok{*} \DecValTok{6} 
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 12 18 24 30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{) }\SpecialCharTok{*} \FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{,}\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{,}\SpecialCharTok{{-}}\DecValTok{4}\NormalTok{,}\DecValTok{6}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  -4  -9 -16  30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{) }\SpecialCharTok{*} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  2  6  4 10
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+ \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{) }\SpecialCharTok{*} \FunctionTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{7}\NormalTok{,}\DecValTok{8}\NormalTok{) }\CommentTok{\# Warning message}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in c(2, 3, 4, 5) * c(6, 7, 8): longer object length is not a multiple
+## of shorter object length
+\end{verbatim}
+
+\begin{verbatim}
+## [1] 12 21 32 30
+\end{verbatim}
+
+\textbf{Addition with vector versus scalar}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{) }\SpecialCharTok{+} \DecValTok{20}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 22 23 24 25
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  8 10 10 12
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{,}\DecValTok{7}\NormalTok{,}\DecValTok{8}\NormalTok{) }\CommentTok{\# with warning message}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in c(2, 3, 4, 5) + c(6, 7, 8): longer object length is not a multiple
+## of shorter object length
+\end{verbatim}
+
+\begin{verbatim}
+## [1]  8 10 12 11
+\end{verbatim}
+
+\newpage
+
+\textbf{Some Basic functions in R:} To get the maximum and minimum value
+from the vector
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{max}\NormalTok{(}\FloatTok{4.2}\NormalTok{, }\FloatTok{3.7}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{2.3}\NormalTok{, }\DecValTok{4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{min}\NormalTok{(}\FloatTok{4.2}\NormalTok{, }\FloatTok{3.7}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{2.3}\NormalTok{, }\DecValTok{4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -2.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x}\OtherTok{=}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{)}
+\FunctionTok{max}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{min}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+
+some more basic functions in R
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{abs}\NormalTok{()      }\CommentTok{\# to get the absolute Values}
+\FunctionTok{sqrt}\NormalTok{()     }\CommentTok{\# to get the square root}
+\FunctionTok{round}\NormalTok{()    }\CommentTok{\# to get the round value}
+\FunctionTok{floor}\NormalTok{()    }\CommentTok{\# to get the floor value }
+\FunctionTok{ceiling}\NormalTok{()  }\CommentTok{\# to get the ceiling value}
+\FunctionTok{sum}\NormalTok{()      }\CommentTok{\# to get the sum of the values}
+\FunctionTok{prod}\NormalTok{()     }\CommentTok{\# to get the product of the values}
+\FunctionTok{mean}\NormalTok{()     }\CommentTok{\# to get the average of the values}
+\FunctionTok{log}\NormalTok{()      }\CommentTok{\# to get the log value}
+\FunctionTok{exp}\NormalTok{()      }\CommentTok{\# to get the exponential value}
+\FunctionTok{length}\NormalTok{()   }\CommentTok{\# to get the length of the vector}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Trigonometric functions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sin}\NormalTok{()  }\CommentTok{\# to get the sin value}
+\FunctionTok{cos}\NormalTok{()  }\CommentTok{\# to get the cos value}
+\FunctionTok{tan}\NormalTok{()  }\CommentTok{\# to get the tan value}
+\FunctionTok{asin}\NormalTok{() }\CommentTok{\# to get the cosec value}
+\FunctionTok{acos}\NormalTok{() }\CommentTok{\# to get the sec value}
+\FunctionTok{atan}\NormalTok{() }\CommentTok{\# to get the cot value}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Hyperbolic functions}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sinh}\NormalTok{()  }\CommentTok{\# to get the sinh value}
+\FunctionTok{cosh}\NormalTok{()  }\CommentTok{\# to get the cosh value}
+\FunctionTok{tanh}\NormalTok{()  }\CommentTok{\# to get the tanh value}
+\FunctionTok{asinh}\NormalTok{() }\CommentTok{\# to get the cosech value}
+\FunctionTok{acosh}\NormalTok{() }\CommentTok{\# to get the sech value}
+\FunctionTok{atanh}\NormalTok{() }\CommentTok{\# to get the coth value}
+\end{Highlighting}
+\end{Shaded}
+
+An assignment can also be used to save values in variables:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{)}
+\NormalTok{y }\OtherTok{=}\NormalTok{ x}\SpecialCharTok{\^{}}\DecValTok{2} 
+\FunctionTok{print}\NormalTok{(y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  4  9 16 25
 \end{verbatim}
 
 \newpage
@@ -998,7 +1234,8 @@ like:
 
 \newpage
 
-\#\#Github commands \textbf{Repository}
+\subsection{Github Commands
+Repository}\label{github-commands-repository}
 
 A repository is a storage space where your project lives. It can be
 local to a folder on your computer or it can be a storage space on
@@ -1049,6 +1286,76 @@ This is the flow chart of github
 \NormalTok{git commit }\SpecialCharTok{{-}}\NormalTok{m }\StringTok{"first commit"} \SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ commit }
 \NormalTok{git remote add origin git}\SpecialCharTok{@}\NormalTok{github.com}\SpecialCharTok{:}\NormalTok{username}\SpecialCharTok{/}\ErrorTok{\textless{}}\NormalTok{reponame}\SpecialCharTok{\textgreater{}}\NormalTok{.git }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{choosing the git website}
 \NormalTok{git push }\SpecialCharTok{{-}}\NormalTok{u origin master   }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ pushing the changes to the master }
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Git Commit Commands}
+
+Commit takes the snapshot of all the changes / the modifications that
+you have done at the time and store them in a tree like structure. It is
+like a save point in a game.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{git status                 }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To check the status of the git}
+\NormalTok{git commit }\SpecialCharTok{{-}}\NormalTok{m }\StringTok{"message"}    \SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To commit the changes}
+\NormalTok{git commit }\SpecialCharTok{{-}{-}}\NormalTok{help          }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To get the help  the commit}
+\NormalTok{git log                    }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To show the history of the commit }
+\end{Highlighting}
+\end{Shaded}
+
+as we know that git stores all the changes in a tree like structure so
+we can use the git log to see the history of the commit . some of the
+git commands allow su to move back and forth between the commit history
+
+There are some git commands which allow us to move back and forth
+between the commits temporarily and permanently
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{git checkout }\SpecialCharTok{\textless{}}\NormalTok{commit id}\SpecialCharTok{\textgreater{}}  \ErrorTok{|}\SpecialCharTok{{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To move to the commit id}
+\NormalTok{git checkout master       }\SpecialCharTok{|{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To move to the master}
+\end{Highlighting}
+\end{Shaded}
+
+this is the command to move back and forth between the commits as
+temporary
+
+there are some commands which allow us to move back and forth between
+the commits as permanent.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{git revert }\SpecialCharTok{\textless{}}\NormalTok{commit id}\SpecialCharTok{\textgreater{}}    \ErrorTok{|}\SpecialCharTok{{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To move to the commit id one step back }
+\end{Highlighting}
+\end{Shaded}
+
+There are some commands which allow us to move back and forth between
+the commits as permanent with more than one step back . there is no
+return to future
+
+\newpage
+
+that is git reset command
+
+there are three types of reset commands:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  soft
+\item
+  mixed
+\item
+  hard
+\end{enumerate}
+
+git reset commands allow us to move to the commit id then make that as a
+master
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{git reset }\SpecialCharTok{{-}{-}}\NormalTok{hard }\SpecialCharTok{\textless{}}\NormalTok{commit id}\SpecialCharTok{\textgreater{}} \ErrorTok{|}\SpecialCharTok{{-}{-}}\OtherTok{{-}\textgreater{}}\NormalTok{ To move to the commit id and make that as master}
 \end{Highlighting}
 \end{Shaded}
 

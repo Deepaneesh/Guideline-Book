@@ -82,30 +82,6 @@ A **composite hypothesis** does not specify a single value but rather a range or
 
 Here, the null hypothesis is **composite** because it includes multiple values ($\mu$ can be 50, 51, 52, etc.).
 
-## R Markdown
-
-This is an R Markdown document.
-Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.
-For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
-You can embed an R code chunk like this:
-
-```{r cars, eval=FALSE, message=FALSE, warning=FALSE}
-summary(cars)
-hello
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
 \newpage
 
 # R PROGRAMMING
@@ -331,7 +307,9 @@ df <- data.frame(Name = c("A", "B"), Age = c(25, 30))
 df$Name
 ```
 
-Data Types in R In R, data types are classified into two type.
+## Data types in R
+
+Data Types in R , data types are classified into two type.
 
 -   Object
 
@@ -419,8 +397,7 @@ as.factor() # To change the data type to factor
 
 
 ```
-
-[**Using R as a Calculator**]{.underline}
+## R for calculations
 
 We can use R as a basic calculator to perform arithmetic operations.
 For example, we can add, subtract, multiply, and divide numbers using R.
@@ -449,8 +426,105 @@ While using concatenate we can use multiple values but in a same data type
 print(x)
 ```
 
+**Some Basic Commands in R:**
+
+```{r Variable removing ,echo=TRUE, message=FALSE, warning=FALSE}
+ rm(x) # To remove the variable
+```
+
+```{r quiting R , eval=FALSE, message=FALSE, warning=FALSE}
+q() # To quit the R
+```
+
 \newpage
 
+\# : The character \# marks the beginning of a commend
+
+```{r hastag ,echo=TRUE, message=FALSE, warning=FALSE}
+# this is command x=12
+```
+
+**Power operators with vector versus scalar**
+
+```{r power vector, echo=TRUE, message=FALSE, warning=TRUE}
+c(3,4,5,6)^2 # Power operator with vector
+c(3,4,5,6)^c(2,3) # Power operator with vector
+c(2,3,4,5)^c(3,4,5) # Power operator with vector with warning
+```
+
+in general warning and error are different
+
+-   **Warning** is a message that is displayed when the code is executed
+
+-   **Error** is a message that is displayed when the code is not executed
+
+**Multiplication with vector versus scalar**
+```{r Multiplication vector, echo=TRUE, message=TRUE, warning=TRUE}
+c(2,3,4,5) * 6 
+c(2,3,4,5) * c(-2,-3,-4,6)
+c(2,3,4,5) * c(1,2)
+ c(2,3,4,5) * c(6,7,8) # Warning message
+```
+
+**Addition with vector versus scalar**
+```{r Addition vector, echo=TRUE, message=TRUE, warning=TRUE}
+c(2,3,4,5) + 20
+c(2, 3, 4, 5) + c(6, 7)
+c(2,3,4,5) + c(6,7,8) # with warning message
+```
+\newpage
+**Some Basic functions in R:**
+To get the maximum and minimum value from the vector
+```{r some basic , echo=TRUE, message=TRUE, warning=TRUE}
+max(4.2, 3.7, -2.3, 4)
+min(4.2, 3.7, -2.3, 4)
+x=c(1,2,3,4,5)
+max(x)
+min(x)
+```
+
+some more basic functions in R
+```{r overview , eval=FALSE, message=FALSE, warning=FALSE}
+abs()      # to get the absolute Values
+sqrt()     # to get the square root
+round()    # to get the round value
+floor()    # to get the floor value 
+ceiling()  # to get the ceiling value
+sum()      # to get the sum of the values
+prod()     # to get the product of the values
+mean()     # to get the average of the values
+log()      # to get the log value
+exp()      # to get the exponential value
+length()   # to get the length of the vector
+```
+
+**Trigonometric functions**
+```{r Trigonometric functions , eval=FALSE, message=FALSE, warning=FALSE}
+sin()  # to get the sin value
+cos()  # to get the cos value
+tan()  # to get the tan value
+asin() # to get the cosec value
+acos() # to get the sec value
+atan() # to get the cot value
+```
+
+**Hyperbolic functions**
+```{r Hyperbolic functions , eval=FALSE, message=FALSE, warning=FALSE}
+sinh()  # to get the sinh value
+cosh()  # to get the cosh value
+tanh()  # to get the tanh value
+asinh() # to get the cosech value
+acosh() # to get the sech value
+atanh() # to get the coth value
+```
+An assignment can also be used to save values in variables:
+```{r new variable , echo=TRUE, message=TRUE, warning=TRUE}
+x = c(2,3,4,5)
+y = x^2 
+print(y)
+```
+
+\newpage
 # GIT & GITHUB
 
 ## Git / GitHub
@@ -489,9 +563,6 @@ cd.. -> To go back to the previous directory
 cd/ -> To go to the root directory(Home)
 cd/mnt/E -> To change the directory to E drive 
 dir ->To list the files in the directory
-
-
-
 ```
 
 **Folder Creation**
@@ -526,7 +597,7 @@ del . |--> To remove all the files in the directory
 
 \newpage
 
-##Github commands **Repository**
+## Github Commands Repository
 
 A repository is a storage space where your project lives.
 It can be local to a folder on your computer or it can be a storage space on GitHub or another online platform.
@@ -569,4 +640,55 @@ git add .                    |---> add everything
 git commit -m "first commit" |---> commit 
 git remote add origin git@github.com:username/<reponame>.git |--->choosing the git website
 git push -u origin master   |---> pushing the changes to the master 
+```
+
+**Git Commit Commands**
+
+Commit takes the snapshot of all the changes / the modifications that you have done at the time and store them in a tree like structure.
+It is like a save point in a game.
+
+```{r Git commit Command , eval=FALSE, message=FALSE, warning=FALSE}
+git status                 |---> To check the status of the git
+git commit -m "message"    |---> To commit the changes
+git commit --help          |---> To get the help  the commit
+git log                    |---> To show the history of the commit 
+```
+
+as we know that git stores all the changes in a tree like structure so we can use the git log to see the history of the commit .
+some of the git commands allow su to move back and forth between the commit history
+
+There are some git commands which allow us to move back and forth between the commits temporarily and permanently
+
+```{r Git checkout  , eval=FALSE, message=FALSE, warning=FALSE}
+git checkout <commit id>  |---> To move to the commit id
+git checkout master       |---> To move to the master
+```
+
+this is the command to move back and forth between the commits as temporary
+
+there are some commands which allow us to move back and forth between the commits as permanent.
+
+```{r Git revert , eval=FALSE, message=FALSE, warning=FALSE}
+git revert <commit id>    |---> To move to the commit id one step back 
+```
+
+There are some commands which allow us to move back and forth between the commits as permanent with more than one step back .
+there is no return to future
+
+\newpage
+
+that is git reset command
+
+there are three types of reset commands:
+
+1.  soft
+
+2.  mixed
+
+3.  hard
+
+git reset commands allow us to move to the commit id then make that as a master
+
+```{r Git reset , eval=FALSE, message=FALSE, warning=FALSE}
+git reset --hard <commit id> |---> To move to the commit id and make that as master
 ```
