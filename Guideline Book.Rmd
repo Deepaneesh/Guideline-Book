@@ -84,6 +84,42 @@ Here, the null hypothesis is **composite** because it includes multiple values (
 
 \newpage
 
+# EXCEL
+
+Excel is a spreadsheet software developed by Microsoft.
+It's part of the Microsoft Office suite and is widely used for:
+
+1.  Data organization and analysis
+
+-   Entering and storing data in tables (rows and columns).
+
+-   Sorting, filtering, and summarizing information easily.
+
+2.  Calculations
+
+-   Performing simple to complex mathematical operations using formulas like:
+-   SUM, AVERAGE, COUNT, IF, VLOOKUP, etc.
+
+3.  Data Visualization
+
+-   Creating charts and graphs (bar, line, pie, etc.) to represent data visually.
+
+4.  Built in Functions
+
+-   Excel includes many built-in functions for stats, finance, logic, and more, such as: SUM, AVERAGE, COUNT, IF, VLOOKUP, etc.
+
+5.  Advanced Features
+
+-   PivotTables for summarizing large datasets.
+-   Macros & VBA: Automate tasks using Visual Basic for Applications
+-   Data Analysis Toolpak: Statistical tools for regression, correlation, etc.
+
+6.  File Format
+
+-   Excel files are saved in .xlsx or .xls formats.
+
+\newpage
+
 # R PROGRAMMING
 
 **R** is a programming language and software environment for statistical computing and graphics.
@@ -397,6 +433,7 @@ as.factor() # To change the data type to factor
 
 
 ```
+
 ## R for calculations
 
 We can use R as a basic calculator to perform arithmetic operations.
@@ -459,6 +496,7 @@ in general warning and error are different
 -   **Error** is a message that is displayed when the code is not executed
 
 **Multiplication with vector versus scalar**
+
 ```{r Multiplication vector, echo=TRUE, message=TRUE, warning=TRUE}
 c(2,3,4,5) * 6 
 c(2,3,4,5) * c(-2,-3,-4,6)
@@ -467,14 +505,17 @@ c(2,3,4,5) * c(1,2)
 ```
 
 **Addition with vector versus scalar**
+
 ```{r Addition vector, echo=TRUE, message=TRUE, warning=TRUE}
 c(2,3,4,5) + 20
 c(2, 3, 4, 5) + c(6, 7)
 c(2,3,4,5) + c(6,7,8) # with warning message
 ```
+
 \newpage
-**Some Basic functions in R:**
-To get the maximum and minimum value from the vector
+
+**Some Basic functions in R:** To get the maximum and minimum value from the vector
+
 ```{r some basic , echo=TRUE, message=TRUE, warning=TRUE}
 max(4.2, 3.7, -2.3, 4)
 min(4.2, 3.7, -2.3, 4)
@@ -484,6 +525,7 @@ min(x)
 ```
 
 some more basic functions in R
+
 ```{r overview , eval=FALSE, message=FALSE, warning=FALSE}
 abs()      # to get the absolute Values
 sqrt()     # to get the square root
@@ -499,6 +541,7 @@ length()   # to get the length of the vector
 ```
 
 **Trigonometric functions**
+
 ```{r Trigonometric functions , eval=FALSE, message=FALSE, warning=FALSE}
 sin()  # to get the sin value
 cos()  # to get the cos value
@@ -509,6 +552,7 @@ atan() # to get the cot value
 ```
 
 **Hyperbolic functions**
+
 ```{r Hyperbolic functions , eval=FALSE, message=FALSE, warning=FALSE}
 sinh()  # to get the sinh value
 cosh()  # to get the cosh value
@@ -517,7 +561,9 @@ asinh() # to get the cosech value
 acosh() # to get the sech value
 atanh() # to get the coth value
 ```
+
 An assignment can also be used to save values in variables:
+
 ```{r new variable , echo=TRUE, message=TRUE, warning=TRUE}
 x = c(2,3,4,5)
 y = x^2 
@@ -525,6 +571,7 @@ print(y)
 ```
 
 \newpage
+
 # GIT & GITHUB
 
 ## Git / GitHub
