@@ -119,6 +119,17 @@ It's part of the Microsoft Office suite and is widely used for:
 
 -   Excel files are saved in .xlsx or .xls formats.
 
+## Cell Referencing
+
+There are three types of Cell referencing in excel:
+
+1.  **Relative Cell Reference**: Adjusts when copied to another cell (e.g., A1).
+
+2.  **Absolute Cell Reference**: Remains constant when copied (e.g., \$A\$1).
+    (F4 will make Absolute cell Referencing)
+
+3.  **Mixed Cell Reference**: Partially fixed (e.g., A\$1 or \$A1).
+
 \newpage
 
 # R PROGRAMMING
