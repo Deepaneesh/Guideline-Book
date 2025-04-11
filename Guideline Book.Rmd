@@ -85,36 +85,37 @@ Here, the null hypothesis is **composite** because it includes multiple values (
 \newpage
 
 # EXCEL
-Excel was build by Charles in 1985. 
+
+Excel was build by Charles in 1985.
 Excel is a spreadsheet software developed by Microsoft.
 It's part of the Microsoft Office suite and is widely used for:
 
-1.  Data organization and analysis
+1.  **Data organization and analysis**
 
 -   Entering and storing data in tables (rows and columns).
 
 -   Sorting, filtering, and summarizing information easily.
 
-2.  Calculations
+2.  **Calculations**
 
 -   Performing simple to complex mathematical operations using formulas like:
 -   SUM, AVERAGE, COUNT, IF, VLOOKUP, etc.
 
-3.  Data Visualization
+3.  **Data Visualization**
 
 -   Creating charts and graphs (bar, line, pie, etc.) to represent data visually.
 
-4.  Built in Functions
+4.  **Built in Functions**
 
 -   Excel includes many built-in functions for stats, finance, logic, and more, such as: SUM, AVERAGE, COUNT, IF, VLOOKUP, etc.
 
-5.  Advanced Features
+5.  **Advanced Features**
 
 -   PivotTables for summarizing large datasets.
 -   Macros & VBA: Automate tasks using Visual Basic for Applications
 -   Data Analysis Toolpak: Statistical tools for regression, correlation, etc.
 
-6.  File Format
+6.  **File Format**
 
 -   Excel files are saved in .xlsx or .xls formats.
 
