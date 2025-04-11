@@ -85,7 +85,7 @@ Here, the null hypothesis is **composite** because it includes multiple values (
 \newpage
 
 # EXCEL
-
+Excel was build by Charles in 1985. 
 Excel is a spreadsheet software developed by Microsoft.
 It's part of the Microsoft Office suite and is widely used for:
 
